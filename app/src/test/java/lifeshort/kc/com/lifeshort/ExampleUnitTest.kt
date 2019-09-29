@@ -37,4 +37,29 @@ class ExampleUnitTest {
     fun isAbove0(a : Int) : Boolean {
         return a > 0
     }
+
+
+    @Test
+    fun main1() {
+        val aaa =  getAbc()?.takeIf { false  }?.run {
+            println("hahah")
+            this
+        } ?: "good"
+
+        println(aaa)
+
+
+        val bbb =  null?.takeIf { false  }?.run {
+            println("hahah")
+            this
+        } ?: "good"
+
+        println(bbb)
+
+
+    }
+
+    private fun getAbc(): String? {
+        return "sfafdsfafsf"
+    }
 }
