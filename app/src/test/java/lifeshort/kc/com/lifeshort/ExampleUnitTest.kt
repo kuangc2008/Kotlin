@@ -41,8 +41,10 @@ class ExampleUnitTest {
 
     @Test
     fun main1() {
-        val aaa =  getAbc()?.takeIf { false  }?.run {
+        val length = 0
+        val aaa =  getAbc()?.takeIf { true  }?.run {
             println("hahah")
+            println(length)
             this
         } ?: "good"
 
@@ -56,8 +58,8 @@ class ExampleUnitTest {
 
         println(bbb)
 
-
     }
+
 
     private fun getAbc(): String? {
         return "sfafdsfafsf"
